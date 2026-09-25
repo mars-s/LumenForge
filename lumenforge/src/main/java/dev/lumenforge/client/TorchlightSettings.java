@@ -82,4 +82,3 @@ final class TorchlightSettings {
                 .resolve("materials").resolve(material + ".json");
     }
 }
-
