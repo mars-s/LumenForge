@@ -1,0 +1,59 @@
+plugins {
+    id "fabric-loom" version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    maven {
+        name = "Fabric"
+        url = "https://maven.fabricmc.net/"
+    }
+    mavenCentral()
+}
+
+def defaultModsDir = new File(System.getenv("APPDATA"),
+        "PrismLauncher/instances/DLSS Beautiful 26.2/minecraft/mods")
+def sodiumJar = providers.gradleProperty("sodiumJar")
+        .map { file(it) }
+        .getOrElse(new File(defaultModsDir, "sodium-fabric-0.9.2+mc26.2.jar"))
+def causticaJar = providers.gradleProperty("causticaJar")
+        .map { file(it) }
+        .getOrElse(new File(defaultModsDir, "caustica-0.1.1.jar"))
+
+[sodiumJar, causticaJar].each { dependency ->
+    if (!dependency.isFile()) {
+        throw new GradleException("Missing compile dependency: ${dependency}. " +
+                "Pass -PsodiumJar=... or -PcausticaJar=... when building outside the managed Prism profile.")
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    compileOnly files(sodiumJar)
+    compileOnly files(causticaJar)
+}
+
+processResources {
+    inputs.property "version", project.version
+    filesMatching("fabric.mod.json") {
+        expand "version": inputs.properties.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+    withSourcesJar()
+}
+
