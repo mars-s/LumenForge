@@ -411,4 +411,3 @@ public final class LumenForgeConfigEntryPoint implements ConfigEntryPoint {
         }
     }
 }
-

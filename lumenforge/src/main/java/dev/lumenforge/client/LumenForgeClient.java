@@ -10,4 +10,3 @@ public final class LumenForgeClient implements ClientModInitializer {
         ExposureProfiles.applyAndSave();
     }
 }
-
