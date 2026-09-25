@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "lumenforge",
+  "version": "${version}",
+  "name": "LumenForge",
+  "description": "Native Sodium controls for Caustica ray reconstruction, frame generation, and path tracing.",
+  "authors": ["avi"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.lumenforge.client.LumenForgeClient"
+    ],
+    "sodium:config_api_user": [
+      "dev.lumenforge.client.LumenForgeConfigEntryPoint"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.2",
+    "java": ">=25",
+    "sodium": ">=0.9.2",
+    "caustica": ">=0.1.1"
+  }
+}
+
