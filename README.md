@@ -107,4 +107,3 @@ generated frame reaches the display. Minecraft selected FIFO_RELAXED in the
 observed 4K fullscreen run. Treat Caustica FG as experimental until an in-game
 test confirms generated presents are not being replaced or dropped; the
 Performance profile's driver Smooth Motion path is the reliable fallback.
-

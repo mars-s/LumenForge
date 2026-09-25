@@ -26,4 +26,3 @@ For another setup, pass explicit dependency jars:
 ```powershell
 .\gradlew.bat build -PsodiumJar=C:\path\to\sodium.jar -PcausticaJar=C:\path\to\caustica.jar
 ```
-

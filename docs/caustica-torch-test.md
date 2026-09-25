@@ -52,4 +52,3 @@ the shared value had reached +10.8 EV while the mode was Auto. Returning that
 bias to 0.0 EV restored the intended baseline. LumenForge now persists separate
 Auto Bias and Manual EV values and applies only the active one when changing
 modes, preventing this cross-mode carryover through its Visuals page.
-

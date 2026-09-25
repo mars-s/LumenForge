@@ -48,4 +48,3 @@ resolution before returning to 4K. Only after the pack renders correctly
 should DLSS buffer extraction/integration be investigated. Vitrail currently
 has camera-only motion vectors, not the object motion and renderer guide data
 needed for reliable Ray Reconstruction and native Frame Generation.
-

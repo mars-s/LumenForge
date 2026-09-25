@@ -92,4 +92,3 @@ contains large black regions. This is not an active Beautiful mode. See the
 - [NVIDIA DLSS-G integration checklist](https://github.com/NVIDIA-RTX/Streamline/blob/main/docs/ProgrammingGuideDLSS_G.md)
 - [NVIDIA Smooth Motion setup and Vulkan/RTX 40 support](https://nvidia.custhelp.com/app/answers/detail/a_id/5621/)
 - [Prism Launcher command-line interface](https://prismlauncher.org/wiki/getting-started/command-line-interface/)
-

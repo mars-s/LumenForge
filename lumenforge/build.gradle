@@ -56,4 +56,3 @@ java {
     targetCompatibility = JavaVersion.VERSION_25
     withSourcesJar()
 }
-
