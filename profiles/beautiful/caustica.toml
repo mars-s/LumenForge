@@ -1,0 +1,89 @@
+# RTX 4060 Laptop / 4K starting point. Every value remains tunable in the
+# Caustica Video Settings UI or by editing this file while Minecraft is closed.
+enabled = true
+worker-threads = 4
+
+[composite]
+debug-view = 0
+spp = 1
+max-bounces = 4
+water-waves = true
+sun-angular-radius-deg = 0.6
+moon-angular-radius-deg = 1.5
+sun-noon-south-tilt-deg = 30.0
+jitter-sign-x = 1.0
+jitter-sign-y = -1.0
+
+[terrain]
+async-dispatch-per-tick = 32
+section-results-per-tick = 32
+max-inflight-sections = 32
+section-table-initial-capacity = 512
+rebase-distance-blocks = 128
+blas-compaction = true
+
+[omm]
+enabled = true
+subdivision = 4
+stats = false
+
+[entities]
+enabled = true
+max-ordinary-entities = 1024
+
+[entities.glow]
+enabled = true
+
+[entities.name-tags]
+enabled = true
+
+[entities.debug]
+capture-parity = false
+
+[entities.block-entities]
+max-entities = 1024
+view-chunks = 8
+builds-per-frame = 64
+
+[entities.refit]
+enabled = true
+
+[entities.textures]
+max-textures = 256
+pbr = true
+
+[particles]
+enabled = true
+max-particles = 1024
+
+[dlss-rr]
+enabled = true
+preset = 0
+quality = 0
+
+[frame-generation]
+enabled = true
+multi-frame-count = 1
+
+[reflex]
+enabled = true
+low-latency-boost = false
+minimum-interval-us = 0
+
+[exposure]
+mode = "auto"
+manual-ev = 0.0
+key = 0.18
+min-ev = -1.5
+max-ev = 6.0
+adapt-up = 0.12
+adapt-down = 0.35
+
+[frame-stats]
+enabled = false
+
+[hdr]
+enabled = false
+paper-white-nits = 200.0
+peak-nits = 1000.0
+

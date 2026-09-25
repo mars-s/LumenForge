@@ -1,0 +1,10 @@
+{
+  "format": 1,
+  "match": {
+    "sprite": "minecraft:block/weathered_copper_lantern"
+  },
+  "emission": {
+    "strength": 4.0
+  }
+}
+
