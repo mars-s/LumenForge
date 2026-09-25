@@ -44,4 +44,3 @@ $instanceCfg = Get-Content -LiteralPath (Join-Path $performance 'instance.cfg') 
 Assert-True ($instanceCfg -match '(?m)^JavaPath=.+/javaw-dlss-performance\.exe\r?$') 'Performance must use its dedicated Java alias'
 
 Write-Host 'PASS: both Prism profiles have the expected renderer, DLSS, and isolation settings.'
-

@@ -137,4 +137,3 @@ if (-not $WhatIfPreference) {
     Write-Host "  $PerformanceName"
     Write-Host 'Saved worlds were not copied.'
 }
-
